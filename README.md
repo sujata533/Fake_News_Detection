@@ -39,8 +39,8 @@ Multinomial Naive Bayes
 
 | Model               | Accuracy |
 | ------------------- | -------- |
-| Logistic Regression | XX%      |
-| Naive Bayes         | XX%      |
+| Logistic Regression | 99%      |
+| Naive Bayes         | 93%      |
 
 
 🧹 Text Processing Steps
