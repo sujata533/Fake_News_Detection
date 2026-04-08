@@ -26,8 +26,12 @@ st.set_page_config(page_title="Fake News Detector", page_icon="📰")
 st.title("📰 Fake News Detector")
 st.markdown("Detect whether a news article is **Fake or Real** using Machine Learning.")
 
+
 # Input
 input_text = st.text_area("✍️ Enter news text here:")
+if len(input_text.split()) < 20:
+        st.warning("Please enter a longer news article for better prediction.")
+
 
 # Button
 if st.button("🔍 Analyze"):
@@ -39,7 +43,7 @@ if st.button("🔍 Analyze"):
 
         transformed_text = vectorizer.transform([cleaned])
         prediction = model.predict(transformed_text)
-
+    
         st.subheader("Result:")
 
         if prediction[0] == 0:
